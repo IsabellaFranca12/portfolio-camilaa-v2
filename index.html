@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre Olhares | Portfolio Profissional</title>
+    
+    <!-- Fontes sofisticadas: Playfair para títulos e Inter para textos -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #888;
+            --bg: #ffffff;
+            --soft-bg: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--primary);
+            overflow-x: hidden;
+        }
+
+        /* Header Minimalista */
+        header {
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 0.8rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--secondary);
+            margin-top: 15px;
+        }
+
+        /* 1. CARROSSEL DE IMAGENS (Infinito) */
+        .slider-section {
+            padding: 40px 0;
+            background: var(--soft-bg);
+        }
+
+        .slider {
+            display: flex;
+            width: 200%; /* Garante espaço para o scroll */
+            animation: scroll-photos 30s linear infinite;
+        }
+
+        .slider:hover { animation-play-state: paused; }
+
+        .slide {
+            width: 450px;
+            height: 550px;
+            margin: 0 15px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #aaa;
+            border: 1px solid #ddd;
+        }
+
+        @keyframes scroll-photos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* 2. LOGOS DAS MARCAS (Padronizadas) */
+        .brands-section {
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .brands-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            opacity: 0.5;
+            filter: grayscale(1); /* Padrão minimalista em tons de cinza */
+        }
+
+        .brand-logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        /* 3. AVALIAÇÕES ESTILO LINKEDIN */
+        .testimonials-section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .testimonial-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 25px;
+            padding: 20px 0;
+            scrollbar-width: none; /* Esconde scroll no Firefox */
+        }
+
+        .testimonial-container::-webkit-scrollbar { display: none; } /* Esconde scroll no Chrome/Safari */
+
+        .testimonial-card {
+            min-width: 350px;
+            background: #fff;
+            padding: 40px;
+            border: 1px solid #efefef;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border-radius: 4px;
+        }
+
+        .testimonial-card p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid #f5f5f5;
+            padding-top: 20px;
+        }
+
+        .user-info strong { font-size: 0.9rem; }
+        .user-info span { font-size: 0.8rem; color: var(--secondary); }
+
+        footer {
+            padding: 60px;
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Entre Olhares</h1>
+        <div class="tagline">Eventos & Identidade Visual</div>
+    </header>
+
+    <!-- Seção de Carrossel -->
+    <section class="slider-section">
+        <div class="slider">
+            <!-- Você pode substituir os nomes pelas suas fotos reais depois -->
+            <div class="slide">Casamento Editorial</div>
+            <div class="slide">Formatura Elegance</div>
+            <div class="slide">Corporativo Clean</div>
+            <div class="slide">Retrato Profissional</div>
+            <div class="slide">Workshop Arte</div>
+            <!-- Repetição para o efeito infinito -->
+            <div class="slide">Casamento Editorial</div>
+            <div class="slide">Formatura Elegance</div>
+            <div class="slide">Corporativo Clean</div>
+        </div>
+    </section>
+
+    <!-- Seção de Logos -->
+    <section class="brands-section">
+        <div class="tagline">Marcas Parceiras</div>
+        <div class="brands-grid">
+            <div class="brand-logo">NOME_DA_MARCA_1</div>
+            <div class="brand-logo">NOME_DA_MARCA_2</div>
+            <div class="brand-logo">NOME_DA_MARCA_3</div>
+            <div class="brand-logo">NOME_DA_MARCA_4</div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="testimonials-section">
+        <div class="tagline" style="margin-bottom: 30px; text-align: left;">Feedback de Clientes</div>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p>"O serviço da Entre Olhares trouxe uma estética que eu não encontrava no mercado. O cuidado com os detalhes é visível."</p>
+                <div class="user-info">
+                    <div>
+                        <strong>Juliana Costa</strong><br>
+                        <span>CEO na Creative Studio</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"As fotos capturaram exatamente a emoção do evento sem parecerem forçadas. O minimalismo da entrega final é incrível."</p>
+                <div class="user-info">
+                    <div>
+                        <strong>Ricardo Alves</strong><br>
+                        <span>Organizador de Eventos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Excelente profissionalismo. A entrega das fotos em formato diferenciado foi o que mais elogiamos."</p>
+                <div class="user-info">
+                    <div>
+                        <strong>Mariana Braga</strong><br>
+                        <span>Noiva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 ENTRE OLHARES. TODOS OS DIREITOS RESERVADOS.
+    </footer>
+
+</body>
+</html>
